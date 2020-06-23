@@ -9,7 +9,7 @@ app.use(authent_middleware)
 app.use('/birds', bird);
 app.use('/cats', cat);
 
-const get_article_json = (article_id) => {
+const get_article_json = (article_id: string) => {
     return {
         id: article_id,
         title: `article ${article_id}`

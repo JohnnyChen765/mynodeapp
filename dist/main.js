@@ -1,17 +1,20 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-var express_1 = require("express");
-var authent_1 = require("./authent");
-var bird_1 = require("./bird");
-var cat_1 = require("./cat");
-var app = express_1.default();
+const express_1 = __importDefault(require("express"));
+const authent_1 = require("./authent");
+const bird_1 = __importDefault(require("./bird"));
+const cat_1 = __importDefault(require("./cat"));
+const app = express_1.default();
 app.use(authent_1.authent_middleware);
 app.use('/birds', bird_1.default);
 app.use('/cats', cat_1.default);
-var get_article_json = function (article_id) {
+const get_article_json = (article_id) => {
     return {
         id: article_id,
-        title: "article " + article_id
+        title: `article ${article_id}`
     };
 };
 app.get('/', function (req, res) {
@@ -36,4 +39,3 @@ app.route('/book')
 app.listen(3001, function () {
     console.log('Example app listening on port 3001!');
 });
-//# sourceMappingURL=main.js.map

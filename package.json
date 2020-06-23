@@ -2,7 +2,7 @@
   "name": "mynodeapp",
   "version": "1.0.0",
   "description": "",
-  "main": "src/main.js",
+  "main": "dist/main.js",
   "scripts": {
     "build": "npx tsc",
     "start": "nodemon --exec babel-node dist/main.js",
