@@ -1,0 +1,20 @@
+- Can retrieve data using Entity manager or Repository
+- TypeORM has a QueryBuilder system for more complex requests
+- TypeORM has a caching system
+- TypeORM has a field validation system 
+-------------------------------------------
+# Embedded Entities:
+- Can use Class as embedded columns. On peut définir une classe X avec des colonnes, et utiliser cette classe comme colonne dans une table Y.
+On aura alors de nouvelles colonnes dans la table Y.
+-------------------------------------------
+# Concrete Table Inheritance:
+- Can declare abstract class with columns, and other entities can inherit it
+--------------------------------------------
+# Single Table Inheritance
+- On peut avoir une seule entitée/table qui sera partagée dans le code en 3 classes filles
+--------------------------------------------
+- Lazy loading in TypeORM are asynchronous
+--------------------------------------------
+# Entities Listeners & Subscribers:
+- Entities have methods that can be called when creating/inserting/updating/deleting instances just liek Subscribers
+- You can also define Subscribers for that.

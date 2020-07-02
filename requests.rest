@@ -1,0 +1,28 @@
+GET http://localhost:3001/auth/login
+Content-Type: application/json
+
+{
+    "grant_type": "password",
+    "username": "my_username",
+    "password": "my_password"
+}
+###
+GET http://localhost:3001/auth/login
+Content-Type: application/json
+
+{
+    "grant_type": "refresh_token",
+    "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiam9obm55Iiwic2NvcGVzIjpbImFkbWluIl0sImlhdCI6MTU5MzY5MzA3NiwiZXhwIjoxNTkzNjk2Njc2fQ.H74l2ZZHtLq9xeL_ggPHJg_PJEL8SKmuKAoDpJl6bHw"
+}
+###
+GET http://localhost:3001/auth/refresh_token
+Content-Type: application/json
+
+{
+    "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiam9obm55Iiwic2NvcGVzIjpbImFkbWluIl0sImlhdCI6MTU5MzY5MzA3NiwiZXhwIjoxNTkzNjk2Njc2fQ.H74l2ZZHtLq9xeL_ggPHJg_PJEL8SKmuKAoDpJl6bHw"
+
+}
+###
+GET http://localhost:3001/cats
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiam9obm55Iiwic2NvcGVzIjpbImFkbWluIl0sImlhdCI6MTU5MzY4MDg0MCwiZXhwIjoxNTkzNjg0NDQwfQ.0WtXnaAI6BYGNepjhwZ8c2RxEYscABIBDvzyFmNmLLg
+

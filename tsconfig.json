@@ -1,10 +1,15 @@
 {
+    "compileOnSave": true,
     "compilerOptions": {
-        "module": "commonjs",
+        // "watch": true,
+        "module": "commonjs", // Specify module code generation
         "esModuleInterop": true,
         "outDir": "dist",
-        "target": "es6",
-        "strict": true
+        "target": "es2019",
+        "strict": true,
+        // for typeorm, needed for entity ... decorator
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
     },
     "include": [
         "src/**/*"
